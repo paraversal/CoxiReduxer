@@ -1,3 +1,14 @@
+# PROJECT RELATED
+
+*.gguf
+*.json
+
+# macos specific
+
+.DS_Store
+
+### Github Python gitignore template:
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
