@@ -4,7 +4,9 @@ CoxiReduxer is an ML data analysis pipeline to assist with better understanding 
 
 ML solutions seem enticing here because technologies like LLMs allow more general semantic clustering of this type of informal information where other methods (like simply comparing the lexica of different messages) might fall short.
 
-## CoxiReduxer Pipeline
+To summarise, CoxiReduxer uses the JSON export of a large Telegram chat group to infer useful knowledge for fellow students so that it can be collected and stored in a single place.
+
+## Current CoxiReduxer Pipeline
 
 ### 1 Pre-processing
 
@@ -24,4 +26,8 @@ For one, this approach leads to a much semantically summarised version of the ch
 
 ## 3 Topic clustering
 
-This is the
+# Usage
+
+- make sure `uv` is installed
+- run `uv run preprocessing.py --input <path to JSON export>` to pre-process the Telegram JSON export
+- run `uv run main.py` to run the main data analysis pipeline
