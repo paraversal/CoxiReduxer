@@ -2,6 +2,9 @@
 
 *.gguf
 *.json
+*.ipynb
+*.ipynb_checkpoints
+models/*
 
 # macos specific
 

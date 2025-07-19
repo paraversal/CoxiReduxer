@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from typing import Literal
 from pydantic import BaseModel
 
 @dataclass
@@ -18,11 +19,14 @@ class ConversationContext():
     posteriorContext: list[Message]
 
 @dataclass
+class PointOfInterest(BaseModel):
+    type: Literal["question", "fact", "insight", "other"] | str
+    short_summary: str
+    key_phrases: list[str]
+
+@dataclass
 class ConversationClassificationCompletion(BaseModel):
-    questionIfOneExistsInMessage: str | None
-    fact: str | None
-    otherImportantInfoNotCoveredByOtherProperties: str | None
-    keyPhrase: str | None
+    pointsOfInterest: list[PointOfInterest]
 
 @dataclass
 class ConversationClassification():
